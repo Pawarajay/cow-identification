@@ -1,0 +1,163 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #eef1f5;
+    color: #34495e;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    max-width: 850px;
+    width: 100%;
+}
+
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 40px;
+    font-size: 2.5em;
+    font-weight: 600;
+}
+
+.card {
+    background-color: #f7f9fc;
+    padding: 30px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e0e6ec;
+}
+
+h2 {
+    color: #34495e;
+    margin-top: 0;
+    border-bottom: 2px solid #b2c3d5;
+    padding-bottom: 12px;
+    margin-bottom: 25px;
+    font-size: 1.8em;
+    font-weight: 500;
+}
+
+form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #555;
+    font-size: 1.1em;
+}
+
+form input[type="file"],
+form input[type="text"] {
+    width: calc(100% - 22px); /* Account for padding and border */
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccd6e0;
+    border-radius: 6px;
+    font-size: 16px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+form input[type="file"]:focus,
+form input[type="text"]:focus {
+    border-color: #4a90e2;
+    box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.2);
+    outline: none;
+}
+
+form button {
+    background-color: #28a745; /* Green */
+    color: white;
+    padding: 14px 25px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 10px rgba(40, 167, 69, 0.2);
+}
+
+form button:hover {
+    background-color: #218838; /* Darker green */
+    transform: translateY(-2px);
+}
+
+form button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 5px rgba(40, 167, 69, 0.2);
+}
+
+.result {
+    margin-top: 25px;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #e6ffee; /* Light green */
+    border: 1px solid #b3e0b3;
+    color: #28a745;
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+.result p {
+    margin: 5px 0;
+}
+
+.result strong {
+    color: #1a7b32;
+}
+
+.result .error {
+    color: #dc3545; /* Red */
+    background-color: #ffebee; /* Light red */
+    border-color: #ffcdd2;
+    padding: 12px;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.image-preview {
+    margin-top: 30px;
+    text-align: center;
+    padding: 20px;
+    background-color: #f0f4f7;
+    border: 1px solid #d9e2ea;
+    border-radius: 8px;
+}
+
+.image-preview h3 {
+    color: #34495e;
+    margin-bottom: 15px;
+    font-size: 1.3em;
+}
+
+.image-preview img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.image-preview img:hover {
+    transform: scale(1.02);
+}
+
+/* Health status specific styling */
+.healthy {
+    color: #28a744; /* Green */
+    font-weight: bold;
+}
+
+.unhealthy, .conjunctivitis-detected { /* Added class for conjunctivitis */
+    color: #dc3545; /* Red */
+    font-weight: bold;
+}

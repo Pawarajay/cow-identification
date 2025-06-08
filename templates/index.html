@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cow Health & Identification App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Cow Management System</h1>
+
+        <section class="card">
+            <h2>1. Cow Identification</h2>
+            <form id="cowIdForm" enctype="multipart/form-data">
+                <label for="cowImage">Upload Cow Image (Face/Body):</label>
+                <input type="file" id="cowImage" name="cow_image" accept="image/*" required>
+                <button type="submit">Identify Cow</button>
+            </form>
+            <div id="cowIdResult" class="result"></div>
+            <div id="uploadedCowImageContainer" class="image-preview"></div>
+        </section>
+
+        <section class="card">
+            <h2>2. Health Status Prediction (Conjunctivitis)</h2>
+            <form id="healthForm" enctype="multipart/form-data">
+                <label for="eyeImage">Upload Cow Eye Image:</label>
+                <input type="file" id="eyeImage" name="eye_image" accept="image/*" required>
+                <button type="submit">Predict Health</button>
+            </form>
+            <div id="healthResult" class="result"></div>
+            <div id="uploadedEyeImageContainer" class="image-preview"></div>
+        </section>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
